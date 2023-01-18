@@ -1,3 +1,7 @@
+body {
+  background-color:white;
+}
+
 .grid {
   margin:1rem;
   display: grid;
@@ -9,18 +13,23 @@
 .grid > img {
   object-fit: cover;
   width:100%;
-  height:100%;  
+  height:100%;
+  border-radius: 10px;
+}
+.grid > img:hover {
+  filter: blur(4px);
 }
 
-.col-span {
+
+.grid > img:nth-child(1), .grid > img:nth-child(9) {
   grid-column: span 2;
 }
 
-.row-span {
+.grid > img:nth-child(3), .grid > img:nth-child(6) {
   grid-row: span 2;
 }
 
-.four {
+.grid > img:nth-child(5) {
   grid-column: span 2;
   grid-row: span 2;
 }
